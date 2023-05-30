@@ -1,0 +1,102 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerMove : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public float moveSpeed;
+    public float sprintSpeed;
+    public Rigidbody2D rb;
+
+    private Vector2 moveDirection;
+
+    public Animator anim;
+
+    //public AudioSource audioP;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        ProcessInputs();
+
+        MoveAnimations();
+
+    }
+
+    void FixedUpdate()
+    {
+        //Physics calculations
+        Move();
+    }
+
+    void ProcessInputs()
+    {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
+        moveDirection = new Vector2(moveX, moveY).normalized;
+    }
+
+    void Move()
+    {
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+    }
+
+    void MoveAnimations()
+    {
+        if (Input.GetAxisRaw("Horizontal") == 1)
+        {
+            anim.SetBool("isMoving", true);
+        }
+        else if (Input.GetAxisRaw("Horizontal") == -1)
+        {
+            anim.SetBool("isMoving", true);
+
+        }
+        else if (Input.GetAxisRaw("Horizontal") == 0)
+        {
+            anim.SetBool("isMoving", false);
+        }
+
+        if (Input.GetAxisRaw("Vertical") == 1)
+        {
+            anim.SetBool("WDown", true);
+        }
+        else if (Input.GetAxisRaw("Vertical") == -1)
+        {
+            anim.SetBool("DDown", true);
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                Sprint();
+            } else if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                StopSprint();
+            }
+        }
+        else if (Input.GetAxisRaw("Vertical") == 0)
+        {
+            anim.SetBool("DDown", false);
+            anim.SetBool("WDown", false);
+            anim.SetBool("ShiftDown", false);
+        }
+    }
+
+    void Sprint()
+    {
+        moveSpeed = moveSpeed + sprintSpeed;
+        anim.SetBool("ShiftDown", true);
+    }
+
+    void StopSprint()
+    {
+        moveSpeed = moveSpeed;
+        anim.SetBool("ShiftDown", false);
+    }
+
+}
