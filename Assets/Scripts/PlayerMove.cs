@@ -52,16 +52,18 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") == 1)
         {
-            anim.SetBool("isMoving", true);
+            anim.SetBool("DDown", true);
+            anim.SetBool("ADown", false);
         }
         else if (Input.GetAxisRaw("Horizontal") == -1)
         {
-            anim.SetBool("isMoving", true);
-
+            anim.SetBool("ADown", true);
+            anim.SetBool("DDown", false);
         }
         else if (Input.GetAxisRaw("Horizontal") == 0)
         {
-            anim.SetBool("isMoving", false);
+            anim.SetBool("DDown", false);
+            anim.SetBool("ADown", false);
         }
 
         if (Input.GetAxisRaw("Vertical") == 1)
