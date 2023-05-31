@@ -70,7 +70,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetAxisRaw("Vertical") == -1)
         {
-            anim.SetBool("DDown", true);
+            anim.SetBool("SDown", true);
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Sprint();
@@ -81,7 +81,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetAxisRaw("Vertical") == 0)
         {
-            anim.SetBool("DDown", false);
+            anim.SetBool("SDown", false);
             anim.SetBool("WDown", false);
             anim.SetBool("ShiftDown", false);
         }
@@ -95,7 +95,7 @@ public class PlayerMove : MonoBehaviour
 
     void StopSprint()
     {
-        moveSpeed = moveSpeed;
+        moveSpeed = moveSpeed - sprintSpeed;
         anim.SetBool("ShiftDown", false);
     }
 
