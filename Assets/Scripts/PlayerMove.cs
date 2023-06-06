@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     // Start is called before the first frame update
     public float moveSpeed;
+    private bool running = false;
     public float sprintSpeed;
     public Rigidbody2D rb;
 
@@ -50,7 +51,7 @@ public class PlayerMove : MonoBehaviour
 
     void MoveAnimations()
     {
-        if (Input.GetAxisRaw("Horizontal") == 1)
+        /*if (Input.GetAxisRaw("Horizontal") == 1)
         {
             anim.SetBool("DDown", true);
             anim.SetBool("ADown", false);
@@ -80,15 +81,46 @@ public class PlayerMove : MonoBehaviour
         {
             anim.SetBool("SDown", false);
             anim.SetBool("WDown", false);
+        }*/
+        if (running)
+        {
+            if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == 0)
+            {
+                anim.Play("SprintUpAnim");
+                anim.SetBool("WDown", true);
+                anim.SetBool("SDown", false);
+                anim.SetBool("ADown", false);
+                anim.SetBool("DDown", false);
+            }
+        } else
+        {
+            if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == 0)
+            {
+                anim.Play("WalkUpAnim");
+                anim.SetBool("WDown", true);
+                anim.SetBool("SDown", false);
+                anim.SetBool("ADown", false);
+                anim.SetBool("DDown", false);
+            }
+        }
+
+        if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0)
+        {
+            anim.SetBool("WDown", false);
+            anim.SetBool("SDown", false);
+            anim.SetBool("ADown", false);
+            anim.SetBool("DDown", false);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             Sprint();
+            running = true;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             StopSprint();
+            running = false;
         }
 
     }
