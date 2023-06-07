@@ -51,37 +51,7 @@ public class PlayerMove : MonoBehaviour
 
     void MoveAnimations()
     {
-        /*if (Input.GetAxisRaw("Horizontal") == 1)
-        {
-            anim.SetBool("DDown", true);
-            anim.SetBool("ADown", false);
-        }
-        else if (Input.GetAxisRaw("Horizontal") == -1)
-        {
-            anim.SetBool("ADown", true);
-            anim.SetBool("DDown", false);
-        }
-        else if (Input.GetAxisRaw("Horizontal") == 0)
-        {
-            anim.SetBool("DDown", false);
-            anim.SetBool("ADown", false);
-        }
 
-        if (Input.GetAxisRaw("Vertical") == 1)
-        {
-            anim.SetBool("WDown", true);
-            anim.SetBool("SDown", false);
-        }
-        else if (Input.GetAxisRaw("Vertical") == -1)
-        {
-            anim.SetBool("SDown", true);
-            anim.SetBool("WDown", false);
-        }
-        else if (Input.GetAxisRaw("Vertical") == 0)
-        {
-            anim.SetBool("SDown", false);
-            anim.SetBool("WDown", false);
-        }*/
         if (running)
         {
             if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == 0)
@@ -91,6 +61,61 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("SDown", false);
                 anim.SetBool("ADown", false);
                 anim.SetBool("DDown", false);
+            } else if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == 1)
+            {
+                anim.Play("SprintUpRightAnim");
+                anim.SetBool("WDown", true);
+                anim.SetBool("SDown", false);
+                anim.SetBool("ADown", false);
+                anim.SetBool("DDown", true);
+            }
+            else if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 1)
+            {
+                anim.Play("SprintRightAnim");
+                anim.SetBool("WDown", false);
+                anim.SetBool("SDown", false);
+                anim.SetBool("ADown", false);
+                anim.SetBool("DDown", true);
+            }
+            else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == 1)
+            {
+                anim.Play("SprintDownRightAnim");
+                anim.SetBool("WDown", false);
+                anim.SetBool("SDown", true);
+                anim.SetBool("ADown", false);
+                anim.SetBool("DDown", true);
+            }
+            else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == 0)
+            {
+                anim.Play("SprintDownAnim");
+                anim.SetBool("WDown", false);
+                anim.SetBool("SDown", true);
+                anim.SetBool("ADown", false);
+                anim.SetBool("DDown", false);
+            }
+            else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == -1)
+            {
+                anim.Play("SprintDownLeftAnim");
+                anim.SetBool("WDown", false);
+                anim.SetBool("SDown", true);
+                anim.SetBool("ADown", true);
+                anim.SetBool("DDown", false);
+            }
+            else if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == -1)
+            {
+                anim.Play("SprintLeftAnim");
+                anim.SetBool("WDown", false);
+                anim.SetBool("SDown", false);
+                anim.SetBool("ADown", true);
+                anim.SetBool("DDown", false);
+            }
+            else if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == -1)
+            {
+                anim.Play("SprintUpLeftAnim");
+                anim.SetBool("WDown", true);
+                anim.SetBool("SDown", false);
+                anim.SetBool("ADown", true);
+                anim.SetBool("DDown", false); ;
             }
         } else
         {
@@ -101,6 +126,62 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("SDown", false);
                 anim.SetBool("ADown", false);
                 anim.SetBool("DDown", false);
+            }
+            else if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == 1)
+            {
+                anim.Play("WalkUpRightAnim");
+                anim.SetBool("WDown", true);
+                anim.SetBool("SDown", false);
+                anim.SetBool("ADown", false);
+                anim.SetBool("DDown", true);
+            }
+            else if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 1)
+            {
+                anim.Play("WalkRightAnim");
+                anim.SetBool("WDown", false);
+                anim.SetBool("SDown", false);
+                anim.SetBool("ADown", false);
+                anim.SetBool("DDown", true);
+            }
+            else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == 1)
+            {
+                anim.Play("WalkDownRightAnim");
+                anim.SetBool("WDown", false);
+                anim.SetBool("SDown", true);
+                anim.SetBool("ADown", false);
+                anim.SetBool("DDown", true);
+            }
+            else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == 0)
+            {
+                anim.Play("WalkDownAnim");
+                anim.SetBool("WDown", false);
+                anim.SetBool("SDown", true);
+                anim.SetBool("ADown", false);
+                anim.SetBool("DDown", false);
+            }
+            else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == -1)
+            {
+                anim.Play("WalkDownLeftAnim");
+                anim.SetBool("WDown", false);
+                anim.SetBool("SDown", true);
+                anim.SetBool("ADown", true);
+                anim.SetBool("DDown", false);
+            }
+            else if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == -1)
+            {
+                anim.Play("WalkLeftAnim");
+                anim.SetBool("WDown", false);
+                anim.SetBool("SDown", false);
+                anim.SetBool("ADown", true);
+                anim.SetBool("DDown", false);
+            }
+            else if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == -1)
+            {
+                anim.Play("WalkUpLeftAnim");
+                anim.SetBool("WDown", true);
+                anim.SetBool("SDown", false);
+                anim.SetBool("ADown", true);
+                anim.SetBool("DDown", false); ;
             }
         }
 
@@ -114,28 +195,17 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Sprint();
+            moveSpeed = moveSpeed + sprintSpeed;
+            anim.SetBool("ShiftDown", true);
             running = true;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            StopSprint();
+            moveSpeed = moveSpeed - sprintSpeed;
+            anim.SetBool("ShiftDown", false);
             running = false;
         }
 
-    }
-
-
-    void Sprint()
-    {
-        moveSpeed = moveSpeed + sprintSpeed;
-        anim.SetBool("ShiftDown", true);
-    }
-
-    void StopSprint()
-    {
-        moveSpeed = moveSpeed - sprintSpeed;
-        anim.SetBool("ShiftDown", false);
     }
 
 }
