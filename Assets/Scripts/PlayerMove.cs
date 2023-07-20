@@ -6,7 +6,10 @@ public class PlayerMove : MonoBehaviour
 {
     // Start is called before the first frame update
     public float moveSpeed;
+    public float moveX = 0;
+    public float moveY = 0;
     private bool running = false;
+    public bool canMove = true;
     public float sprintSpeed;
     public Rigidbody2D rb;
 
@@ -14,19 +17,61 @@ public class PlayerMove : MonoBehaviour
 
     public Animator anim;
 
+    public GameObject sword;
+
+    Sword swordScript;
+
+    PlayerBasicAttack baScript;
+
     //public AudioSource audioP;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        sword = GameObject.Find("Sword");
+        swordScript = sword.GetComponent<Sword>();
+        baScript = GetComponent<PlayerBasicAttack>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (canMove == true)
+        {
+            MoveAnimations();
+        }
+
         ProcessInputs();
 
-        MoveAnimations();
+        //Debug.Log(Input.GetAxisRaw("Horizontal"));
+        if (baScript.attacking == false){
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            {
+                if (canMove == true)
+                {
+                    swordScript.sr.enabled = false;
+                    swordScript.cc.enabled = false;
+                }
+            }
+        } else
+        {
+            swordScript.sr.enabled = true;
+            swordScript.cc.enabled = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            moveSpeed = moveSpeed + sprintSpeed;
+            anim.SetBool("ShiftDown", true);
+            running = true;
+        }
+
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            moveSpeed = moveSpeed - sprintSpeed;
+            anim.SetBool("ShiftDown", false);
+            running = false;
+        }
 
     }
 
@@ -34,19 +79,27 @@ public class PlayerMove : MonoBehaviour
     {
         //Physics calculations
         Move();
+        
     }
 
     void ProcessInputs()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-
+        moveX = Input.GetAxisRaw("Horizontal");
+        moveY = Input.GetAxisRaw("Vertical");
+        
         moveDirection = new Vector2(moveX, moveY).normalized;
     }
 
     void Move()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        if (canMove == true)
+        {
+            rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        } else
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
+        
     }
 
     void MoveAnimations()
@@ -191,19 +244,6 @@ public class PlayerMove : MonoBehaviour
             anim.SetBool("SDown", false);
             anim.SetBool("ADown", false);
             anim.SetBool("DDown", false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            moveSpeed = moveSpeed + sprintSpeed;
-            anim.SetBool("ShiftDown", true);
-            running = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            moveSpeed = moveSpeed - sprintSpeed;
-            anim.SetBool("ShiftDown", false);
-            running = false;
         }
 
     }
