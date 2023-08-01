@@ -13,6 +13,8 @@ public class PlayerMove : MonoBehaviour
     public float sprintSpeed;
     public Rigidbody2D rb;
 
+    public int lastwasd = 3;
+
     private Vector2 moveDirection;
 
     public Animator anim;
@@ -31,6 +33,7 @@ public class PlayerMove : MonoBehaviour
         sword = GameObject.Find("Sword");
         swordScript = sword.GetComponent<Sword>();
         baScript = GetComponent<PlayerBasicAttack>();
+        lastwasd = 3;
     }
 
     // Update is called once per frame
@@ -114,6 +117,7 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("SDown", false);
                 anim.SetBool("ADown", false);
                 anim.SetBool("DDown", false);
+                lastwasd = 1;
             } else if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == 1)
             {
                 anim.Play("SprintUpRightAnim");
@@ -129,6 +133,7 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("SDown", false);
                 anim.SetBool("ADown", false);
                 anim.SetBool("DDown", true);
+                lastwasd = 4;
             }
             else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == 1)
             {
@@ -145,6 +150,7 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("SDown", true);
                 anim.SetBool("ADown", false);
                 anim.SetBool("DDown", false);
+                lastwasd = 3;
             }
             else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == -1)
             {
@@ -161,6 +167,7 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("SDown", false);
                 anim.SetBool("ADown", true);
                 anim.SetBool("DDown", false);
+                lastwasd = 2;
             }
             else if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == -1)
             {
@@ -179,6 +186,7 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("SDown", false);
                 anim.SetBool("ADown", false);
                 anim.SetBool("DDown", false);
+                lastwasd = 1;
             }
             else if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == 1)
             {
@@ -195,6 +203,7 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("SDown", false);
                 anim.SetBool("ADown", false);
                 anim.SetBool("DDown", true);
+                lastwasd = 4;
             }
             else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == 1)
             {
@@ -211,6 +220,7 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("SDown", true);
                 anim.SetBool("ADown", false);
                 anim.SetBool("DDown", false);
+                lastwasd = 3;
             }
             else if (Input.GetAxisRaw("Vertical") == -1 && Input.GetAxisRaw("Horizontal") == -1)
             {
@@ -227,6 +237,7 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("SDown", false);
                 anim.SetBool("ADown", true);
                 anim.SetBool("DDown", false);
+                lastwasd = 2;
             }
             else if (Input.GetAxisRaw("Vertical") == 1 && Input.GetAxisRaw("Horizontal") == -1)
             {

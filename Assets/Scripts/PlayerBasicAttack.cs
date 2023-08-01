@@ -32,12 +32,40 @@ public class PlayerBasicAttack : MonoBehaviour
             {
                 if (attackCount == 1)
                 {
-                    anim.Play("Attack1DownAnim");
+                    switch (moveScript.lastwasd)
+                    {
+                        case 1:
+                            anim.Play("Attack1UpAnim");
+                            break;
+                        case 2:
+                            anim.Play("Attack1LeftAnim");
+                            break;
+                        case 3:
+                            anim.Play("Attack1DownAnim");
+                            break;
+                        case 4:
+                            anim.Play("Attack1RightAnim");
+                            break;
+                    }
                     attackCount++;
                 }
                 else if (attackCount == 2)
                 {
-                    anim.Play("Attack2DownAnim");
+                    switch (moveScript.lastwasd)
+                    {
+                        case 1:
+                            anim.Play("Attack2UpAnim");
+                            break;
+                        case 2:
+                            anim.Play("Attack2LeftAnim");
+                            break;
+                        case 3:
+                            anim.Play("Attack2DownAnim");
+                            break;
+                        case 4:
+                            anim.Play("Attack2RightAnim");
+                            break;
+                    }
                     attackCount--;
                 }
 
