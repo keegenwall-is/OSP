@@ -6,6 +6,8 @@ public class Sword : MonoBehaviour
 {
     private PlayerBasicAttack baScript;
 
+    private PlayerMove moveScript;
+
     public Animator anim;
 
     public GameObject player;
@@ -22,6 +24,7 @@ public class Sword : MonoBehaviour
         player = GameObject.Find("Player");
         anim = GetComponent<Animator>();
         baScript = player.GetComponent<PlayerBasicAttack>();
+        moveScript = player.GetComponent<PlayerMove>();
         sr = GetComponent<SpriteRenderer>();
         cc = GetComponent<CapsuleCollider2D>();
     }
@@ -37,14 +40,42 @@ public class Sword : MonoBehaviour
                 {
                     sr.enabled = true;
                     cc.enabled = true;
-                    anim.Play("SwordAttack1Anim");
+                    switch (moveScript.lastwasd)
+                    {
+                        case 1:
+                            anim.Play("SwordAttack1UpAnim");
+                            break;
+                        case 2:
+                            anim.Play("SwordAttack1LeftAnim");
+                            break;
+                        case 3:
+                            anim.Play("SwordAttack1Anim");
+                            break;
+                        case 4:
+                            anim.Play("SwordAttack1RightAnim");
+                            break;
+                    }
                     attackCount++;
                 }
                 else if (attackCount == 2)
                 {
                     sr.enabled = true;
                     cc.enabled = true;
-                    anim.Play("SwordAttack2DownAnim");
+                    switch (moveScript.lastwasd)
+                    {
+                        case 1:
+                            anim.Play("SwordAttack2UpAnim");
+                            break;
+                        case 2:
+                            anim.Play("SwordAttack2LeftAnim");
+                            break;
+                        case 3:
+                            anim.Play("SwordAttack2DownAnim");
+                            break;
+                        case 4:
+                            anim.Play("SwordAttack2RightAnim");
+                            break;
+                    }
                     attackCount--;
                 }
             }
