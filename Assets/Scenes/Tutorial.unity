@@ -2128,9 +2128,9 @@ MonoBehaviour:
   canMove: 1
   sprintSpeed: 5
   rb: {fileID: 324749614}
+  lastwasd: 3
   anim: {fileID: 324749612}
   sword: {fileID: 318228199}
-  swordScript: {fileID: 0}
 --- !u!50 &324749614
 Rigidbody2D:
   serializedVersion: 4
@@ -2183,6 +2183,7 @@ MonoBehaviour:
   anim: {fileID: 324749612}
   sword: {fileID: 318228199}
   canAttack: 1
+  attacking: 0
 --- !u!1 &416601693
 GameObject:
   m_ObjectHideFlags: 0
