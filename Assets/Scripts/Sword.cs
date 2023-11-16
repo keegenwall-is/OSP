@@ -18,8 +18,13 @@ public class Sword : MonoBehaviour
 
     int attackCount = 1;
 
+    private float originalAS;
+
+    public float cooldown = 6.0f;
+    public float cdtimer = 0.0f;
+
     Vector2 upColliderOffset = new Vector2(0, 2);
-    Vector2 leftColliderOffset = new Vector2(-2, 0);
+    Vector2 leftColliderOffset =new Vector2(-2, 0);
     Vector2 downColliderOffset = new Vector2(0, -2);
     Vector2 rightColliderOffset = new Vector2(2, 0);
 
@@ -35,11 +40,20 @@ public class Sword : MonoBehaviour
         moveScript = player.GetComponent<PlayerMove>();
         sr = GetComponent<SpriteRenderer>();
         cc = GetComponent<CapsuleCollider2D>();
+        originalAS = anim.speed;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        cdtimer = cdtimer - 1 * Time.deltaTime;
+
+        if (cdtimer < 0.0f)
+        {
+            cdtimer = 0.0f;
+        }
+
         if (baScript.canAttack == true)
         {
             if (Input.GetKeyDown("u"))
@@ -111,6 +125,14 @@ public class Sword : MonoBehaviour
                     attackCount--;
                 }
             }
+            if (Input.GetKeyDown("o"))
+            {
+                if (cdtimer <= 0)
+                {
+                    StartCoroutine(OAbility(3f));
+                    cdtimer = cooldown;
+                }
+            }
         }
     }
 
@@ -118,6 +140,14 @@ public class Sword : MonoBehaviour
     {
         sr.enabled = false;
         cc.enabled = false;
+    }
+
+    IEnumerator OAbility(float duration)
+    {
+        anim.speed = 2.0f;
+        baScript.StartCoroutine(baScript.OAbility(2.0f, duration));
+        yield return new WaitForSeconds(duration);
+        anim.speed = originalAS;
     }
 
 }

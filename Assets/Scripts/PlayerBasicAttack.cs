@@ -15,12 +15,15 @@ public class PlayerBasicAttack : MonoBehaviour
     public bool canAttack = true;
     public bool attacking = false;
 
+    private float originalAS;
+
     // Start is called before the first frame update
     void Start()
     {
         sword = GameObject.Find("Sword");
         anim = GetComponent<Animator>();
         moveScript = GetComponent<PlayerMove>();
+        originalAS = anim.speed;
     }
 
     // Update is called once per frame
@@ -85,5 +88,14 @@ public class PlayerBasicAttack : MonoBehaviour
         moveScript.canMove = true;
         canAttack = true;
         attacking = false;
+    }
+
+    public IEnumerator OAbility(float newSpeed, float duration)
+    {
+        anim.speed = newSpeed;
+
+        yield return new WaitForSeconds(duration);
+        
+        anim.speed = originalAS;
     }
 }
