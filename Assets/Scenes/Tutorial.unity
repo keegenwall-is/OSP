@@ -1872,6 +1872,7 @@ GameObject:
   - component: {fileID: 262493525}
   - component: {fileID: 262493524}
   - component: {fileID: 262493526}
+  - component: {fileID: 262493527}
   m_Layer: 0
   m_Name: FlameCircleBottom
   m_TagString: Untagged
@@ -1981,6 +1982,23 @@ MonoBehaviour:
   anim: {fileID: 0}
   cooldown: 3
   cdtimer: 0
+  cc: {fileID: 0}
+--- !u!70 &262493527
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262493522}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 2}
+  m_Size: {x: 6.5, y: 4}
+  m_Direction: 1
 --- !u!1 &318228199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,6 +2122,8 @@ MonoBehaviour:
   player: {fileID: 324749609}
   sr: {fileID: 0}
   cc: {fileID: 0}
+  cooldown: 6
+  cdtimer: 0
 --- !u!70 &318228204
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -26018,6 +26038,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   cooldown: 3
   cdtimer: 0
+  cc: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -29202,6 +29223,7 @@ GameObject:
   - component: {fileID: 2069196721}
   - component: {fileID: 2069196720}
   - component: {fileID: 2069196722}
+  - component: {fileID: 2069196723}
   m_Layer: 0
   m_Name: Flame Ball
   m_TagString: Untagged
@@ -29319,6 +29341,23 @@ MonoBehaviour:
   abilityDuration: 2
   adtimer: 0
   dashDistance: 10
+  cc: {fileID: 0}
+--- !u!58 &2069196723
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069196718}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.1, y: -1.7}
+  serializedVersion: 2
+  m_Radius: 1.25
 --- !u!1001 &7438326596813264600
 PrefabInstance:
   m_ObjectHideFlags: 0

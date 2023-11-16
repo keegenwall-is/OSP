@@ -35,6 +35,8 @@ public class PFlameDash : MonoBehaviour
 
     private bool abilityUsed = false;
 
+    public CircleCollider2D cc;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,7 @@ public class PFlameDash : MonoBehaviour
         ballAnim = GetComponent<Animator>();
         moveScript = player.GetComponent<PlayerMove>();
         explScript = player.GetComponent<FireExpl>();
+        cc = GetComponent<CircleCollider2D>();
         //adtimer = abilityDuration + 1.0f;
     }
 
@@ -88,6 +91,8 @@ public class PFlameDash : MonoBehaviour
                         adtimer = 0.0f;
                     }
                     ballAnim.Play("FlameBallAnim");
+                    cc.enabled = true;
+                    StartCoroutine(CCOff());
                     chargesLeft--;
                     switch (moveScript.lastwasd)
                     {
@@ -155,5 +160,12 @@ public class PFlameDash : MonoBehaviour
                 }
             }
         } 
+    }
+
+    IEnumerator CCOff()
+    {
+        yield return new WaitForSeconds(ballAnim.GetCurrentAnimatorStateInfo(0).length);
+
+        cc.enabled = false;
     }
 }
