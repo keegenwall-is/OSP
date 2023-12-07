@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Sword : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Sword : MonoBehaviour
     public SpriteRenderer sr;
 
     public CapsuleCollider2D cc;
+
+    public Text OCd;
 
     int attackCount = 1;
 
@@ -46,12 +49,15 @@ public class Sword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        OCd.text = cdtimer.ToString();
 
         cdtimer = cdtimer - 1 * Time.deltaTime;
+
 
         if (cdtimer < 0.0f)
         {
             cdtimer = 0.0f;
+            OCd.text = "";
         }
 
         if (baScript.canAttack == true)

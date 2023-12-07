@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PFlameDash : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class PFlameDash : MonoBehaviour
     public GameObject player;
 
     public GameObject expl;
+
+    public Text PCd;
 
     private Vector3 startPos;
     private Vector3 endPos;
@@ -52,12 +55,19 @@ public class PFlameDash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        PCd.text = cdtimer.ToString();
+        
         cdtimer = cdtimer - 1 * Time.deltaTime;
 
         if (cdtimer < 0.0f)
         {
             cdtimer = 0.0f;
+            PCd.text = "";
+        }
+
+        if (adtimer >= 0.01)
+        {
+            PCd.text = adtimer.ToString();
         }
 
         if (abilityUsed == true)
@@ -77,6 +87,11 @@ public class PFlameDash : MonoBehaviour
             cdtimer = cooldown;
             chargesLeft = maxCharges;
             abilityUsed = false;
+        }
+
+        if (cdtimer > 0)
+        {
+            chargesLeft = maxCharges;
         }
 
         if (chargesLeft > 0)

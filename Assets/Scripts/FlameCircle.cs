@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlameCircle : MonoBehaviour
 {
 
     public Animator anim;
+    public Text ICd;
     public float cooldown = 3.0f;
     public float cdtimer = 0.0f;
 
@@ -22,10 +24,13 @@ public class FlameCircle : MonoBehaviour
     void Update()
     {
 
+        ICd.text = cdtimer.ToString();
+
         cdtimer = cdtimer - 1 * Time.deltaTime;
         if (cdtimer < 0.0f)
         {
             cdtimer = 0.0f;
+            ICd.text = "";
         }
 
         if (Input.GetKeyDown("i"))
