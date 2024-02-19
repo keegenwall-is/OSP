@@ -1,0 +1,2599 @@
+fileFormatVersion: 2
+guid: 9839603c41b4ecb40b14c48f982b369c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383dedfed6430de47b4a9f772ce31abb
+      internalID: 1951139763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6121533aeb400604bb85ec7d5f4ece2c
+      internalID: 1550003370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56364909d4a039e44b25b85697d37e21
+      internalID: -754040111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_3
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5269af70838f7174081938d0c72d26dc
+      internalID: 245778493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_4
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a299cc86195364419dea8e69d460216
+      internalID: -1690807449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_5
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac865abba37607b4289b6f6b9f556e05
+      internalID: 308370987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_6
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919ce254ad6ecd64293021309aae260a
+      internalID: 1911414948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_7
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee59c9187fc4cd49888d89176e7a74c
+      internalID: -1997446004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_8
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0100a205cc92d1a41bf15799fa882037
+      internalID: 676997398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_9
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f5cf1091520574a97a5fd7db66ddb6
+      internalID: -1246453145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_10
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04f43d2b09c3d7418ef4d67e7862070
+      internalID: -811402033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_11
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0f912634b941c4589bdf4e33152a8a
+      internalID: -1783743917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_12
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3131830b0c17d044ac62186ce360b07
+      internalID: 814312677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_13
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0268adeb82de7e747a7ff68d56c81168
+      internalID: 438584806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_14
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e493aa94fce9194eb65e5316fcc75bd
+      internalID: -1055716834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_15
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ac718e61f9ecc45a67a67535629954
+      internalID: -1104321058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_16
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6138306dfed3de6459dab2a16b35dac4
+      internalID: 967635390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_17
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b43889d2e78b6429c85ed8a425f565
+      internalID: -1224724089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_18
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8172daa34561264d93651c836cfd920
+      internalID: 1644581776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_19
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28453657426359642877edc9237619eb
+      internalID: 181634790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_20
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4654908a52ea35247906c19fcf935fdd
+      internalID: 1086614686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_21
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f256e3ebb1b1ce45b6b3ec4a9d10694
+      internalID: 1630806992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_22
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17602b7e8ac08df488d429ce455fb9c4
+      internalID: -1840335087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_23
+      rect:
+        serializedVersion: 2
+        x: 2484
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81379c63fb2352c40af135161fef9bfc
+      internalID: 1667859406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_24
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4ef1b9676e15c488ad94a5a33f4cfb
+      internalID: 953370992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_25
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920110f9c2b77df449827bd180e7cf41
+      internalID: 918466357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_26
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 700
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8facbe4081e924ea1bf69f82e4f563
+      internalID: -136577816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb5942e24132ee45be0ad12d9bdc6b5
+      internalID: 1828989120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_28
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 600
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bd2a2988d86bb41ac3a7ddd710cd2d
+      internalID: -1215065446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_29
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 600
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de40549546611246b67ed0778eee5cd
+      internalID: -420333802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_30
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 600
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794a29dcd51ee804eb71ee717ad61069
+      internalID: -709557017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_31
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 600
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f7982597e3687438fa894b1a4b3db1
+      internalID: -1690656542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_32
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 600
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7e813e10aaed04293dddec25dcd0b5
+      internalID: 314857176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_33
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 600
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97261d6bd559da14ea23ce5a25420bf4
+      internalID: 700914156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_34
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 600
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83b81887bac94a4fad18d2c01456ce1
+      internalID: -1296188321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_35
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 600
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07b2e7a2990c8e4c85a48132d0cc822
+      internalID: -270552962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4c37ca9931d884ea80ff0fcbb2e569
+      internalID: -2057231164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_37
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 500
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13c355cd6528af44ba6b7c755f648be
+      internalID: -1831764278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_38
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 500
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96589c0cf5d6b646a3ab35247471eaf
+      internalID: 287022986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_39
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 500
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4da38ca944242646b61254305bb960c
+      internalID: 112250676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_40
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 500
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76e7661e61130546b18f857db9d726f
+      internalID: 903097583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_41
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 500
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703264bf190b1084790546593776bee7
+      internalID: -1570594398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_42
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 500
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0efabe4ea2d94945883cb23f73d4637
+      internalID: 1071688346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_43
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 500
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3a76ff90597b241abedf73d3169332
+      internalID: 1863584756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_44
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 500
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb85290610649cc4d8af09a3db36858f
+      internalID: -1705511834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_45
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 500
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd019c3d75835d458ed9aef46a37f10
+      internalID: 164475453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b08930d54c39443ace31c08a2f2333
+      internalID: 1934701979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_47
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a69b86ec855f654c93ca3b0a08c4d82
+      internalID: -190778454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_48
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1853299eb35267643a7531c2f3062ff1
+      internalID: -201304890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_49
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54f21098f14e544c9a02b77a1e56e78
+      internalID: -396400644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_50
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccefd3b60142904cb4954a5e0df607f
+      internalID: -1505571879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_51
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602a4470335e93a4aaf023c6a46a6589
+      internalID: -133499875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_52
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b10c64b62908884aa92f59e16e0f80f
+      internalID: -667712148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_53
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2eef751bd6c82429d2f4e31c334fa7
+      internalID: -1263614736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_54
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b73c3dce041ed4c99e403c987ce055
+      internalID: -1342649505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_55
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e621109ff9f1e5d4285726b6b6efe1cb
+      internalID: 888468448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_56
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab47cada1dd2a294586d631e8ba34bee
+      internalID: -1325941790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_57
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35447778d6dce1e41b36e1c83b0a091f
+      internalID: -1288019852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_58
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc6935f555cc0e4dba80a01f22eb41d
+      internalID: 745127685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_59
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c15d238a35632b458acd00102e76008
+      internalID: -1754228074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_60
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6bfbc10a08ab0c4fa540dbe962d4731
+      internalID: -815473569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_61
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78829f324819d614c8d50fe2e7144c12
+      internalID: -63013331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_62
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a14a21492098e45bacc1f040b06e04
+      internalID: 418343937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05a452920a6fc0478ddbdc4cc629c89
+      internalID: -527545318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_64
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc3259fa13fce64ba05724e24b68dd2
+      internalID: -1879894112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_65
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6ec715bf10cd24dbb3b591162183aa
+      internalID: -2008720778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_66
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53edc55f575b0ce41941b3c12f906e41
+      internalID: -265332525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_67
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956e25dc3fd386241862133b08cae7bf
+      internalID: -655790093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_68
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9129fa57438b44c87ec19399b64566
+      internalID: -1608697373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_69
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3a9639f83b50a4eace2dfe0d9f9bde
+      internalID: -1243488909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_70
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d31ff1ea6f17894a853e139d3ab8885
+      internalID: 478323174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_71
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e5aa88d3d883c49a5fcb769ccfb2d6
+      internalID: 2031107769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_72
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe171ad6491c1844791143b603ed1f6a
+      internalID: -1743857380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_73
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3ae4d40ad0fab488d7ddf5bdb44a64
+      internalID: 309975934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_74
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32d79d3fa119f74b8ec9e9756da268c
+      internalID: -1614572177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_75
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e05d4acbd466994a934e1e253e58b8a
+      internalID: -1220705092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_76
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252cb6161f6ad274e9c20a0f953ab5e5
+      internalID: -89898796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_77
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 300
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed9f4018af9c734684aff2440f485e9
+      internalID: -609667528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c37ab4e31fe694e840d8a05dcc9ff1
+      internalID: 1938789330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_79
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae607e0d66cb46643a13f6ba59663d2a
+      internalID: -675789250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_80
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b178c7e800dad498564f641ba0da63
+      internalID: -225733195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_81
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce10b0ee6a46d2e4cacce187c0360fb7
+      internalID: 72612394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_82
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f2375cebc646945b3ec9c063f166a1
+      internalID: 152082645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_83
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9ebbf49c02edd498b486ff6ae8fdcc
+      internalID: 1630737934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_84
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3431dd932d400b45af0dcc8ea3780dc
+      internalID: -777318305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_85
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77dd52d4a17951e4ea5c8fc913db1c3b
+      internalID: -1273840538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_86
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f52987d697261345859d13b9be9219e
+      internalID: 202611027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_87
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52fcc7a6efa57d49bedc98e9404313a
+      internalID: 636728716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_88
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f3d95611be6504d81147867d06a5c1
+      internalID: 1377073519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_89
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21b245193a444a448f6e9b95ca23198
+      internalID: 341621444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_90
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3597a4bd37627a94698c805c3c61e154
+      internalID: 785845049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_91
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 200
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e233e47b13ddd44db16bc44b458b07c
+      internalID: 1736029228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_92
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762d9657391df6b448555d759c72f606
+      internalID: -1843361835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_93
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 100
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1d391da1e7c4740ab8dd2b72e13cf1
+      internalID: 1865909222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_94
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 100
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ce1096daa689946b773de04a99bd97
+      internalID: 1240259016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_95
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 100
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4c3719e75ed4c44b16aa31aeec23b0
+      internalID: -595896407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7c98c3e61185d44bccd9ab233b04de
+      internalID: 1756282235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_97
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ad78655695bf843b736f05af4715fd
+      internalID: 2053359386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_98
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498c4bb3ff60d64499cd1a0cd94fa854
+      internalID: 691692403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_99
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58cb9d0d72763342aa83b209de04d60
+      internalID: 1699101780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_100
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f151817c6a9f6904b9906000933ee2da
+      internalID: -1031830245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_101
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1097365ba970241bb7e6643c975833
+      internalID: -1062170163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_102
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5c95bf78cd02f4896fca0404715891
+      internalID: -995659182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_103
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b797b3c9e935a4a973888b6034d6e2
+      internalID: -1231176359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_104
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6375e96ceb2b344a2dfe0e8f97dd90
+      internalID: 1967426331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_105
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ce2959def721c499f8ae69e6c7c368
+      internalID: -1544712246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_106
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4f665f2b4924245b75446293eeed99
+      internalID: 2127922836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_107
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cca9bba26fc04e46a6854139b9dc405
+      internalID: 154175829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_108
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbaa76fb7f1806408e1974a3d3619bb
+      internalID: 1236287397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_109
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb22c92b30844f846a075bef0134d0a4
+      internalID: -225189455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_110
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4b97ea78291154584d437bb5be4be7
+      internalID: 1503472268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightningGod_no_drums_dark_version_111
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 0
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8a3eec3e193cb4796e93740924593d
+      internalID: 616739022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      LightningGod_no_drums_dark_version_70: 478323174
+      LightningGod_no_drums_dark_version_103: -1231176359
+      LightningGod_no_drums_dark_version_76: -89898796
+      LightningGod_no_drums_dark_version_32: 314857176
+      LightningGod_no_drums_dark_version_19: 181634790
+      LightningGod_no_drums_dark_version_88: 1377073519
+      LightningGod_no_drums_dark_version_97: 2053359386
+      LightningGod_no_drums_dark_version_57: -1288019852
+      LightningGod_no_drums_dark_version_92: -1843361835
+      LightningGod_no_drums_dark_version_64: -1879894112
+      LightningGod_no_drums_dark_version_46: 1934701979
+      LightningGod_no_drums_dark_version_28: -1215065446
+      LightningGod_no_drums_dark_version_51: -133499875
+      LightningGod_no_drums_dark_version_56: -1325941790
+      LightningGod_no_drums_dark_version_81: 72612394
+      LightningGod_no_drums_dark_version_26: -136577816
+      LightningGod_no_drums_dark_version_110: 1503472268
+      LightningGod_no_drums_dark_version_22: -1840335087
+      LightningGod_no_drums_dark_version_41: -1570594398
+      LightningGod_no_drums_dark_version_90: 785845049
+      LightningGod_no_drums_dark_version_10: -811402033
+      LightningGod_no_drums_dark_version_106: 2127922836
+      LightningGod_no_drums_dark_version_93: 1865909222
+      LightningGod_no_drums_dark_version_12: 814312677
+      LightningGod_no_drums_dark_version_14: -1055716834
+      LightningGod_no_drums_dark_version_85: -1273840538
+      LightningGod_no_drums_dark_version_107: 154175829
+      LightningGod_no_drums_dark_version_4: -1690807449
+      LightningGod_no_drums_dark_version_108: 1236287397
+      LightningGod_no_drums_dark_version_36: -2057231164
+      LightningGod_no_drums_dark_version_9: -1246453145
+      LightningGod_no_drums_dark_version_44: -1705511834
+      LightningGod_no_drums_dark_version_35: -270552962
+      LightningGod_no_drums_dark_version_83: 1630737934
+      LightningGod_no_drums_dark_version_68: -1608697373
+      LightningGod_no_drums_dark_version_43: 1863584756
+      LightningGod_no_drums_dark_version_7: -1997446004
+      LightningGod_no_drums_dark_version_98: 691692403
+      LightningGod_no_drums_dark_version_50: -1505571879
+      LightningGod_no_drums_dark_version_2: -754040111
+      LightningGod_no_drums_dark_version_94: 1240259016
+      LightningGod_no_drums_dark_version_29: -420333802
+      LightningGod_no_drums_dark_version_74: -1614572177
+      LightningGod_no_drums_dark_version_27: 1828989120
+      LightningGod_no_drums_dark_version_62: 418343937
+      LightningGod_no_drums_dark_version_102: -995659182
+      LightningGod_no_drums_dark_version_71: 2031107769
+      LightningGod_no_drums_dark_version_79: -675789250
+      LightningGod_no_drums_dark_version_84: -777318305
+      LightningGod_no_drums_dark_version_48: -201304890
+      LightningGod_no_drums_dark_version_72: -1743857380
+      LightningGod_no_drums_dark_version_104: 1967426331
+      LightningGod_no_drums_dark_version_30: -709557017
+      LightningGod_no_drums_dark_version_1: 1550003370
+      LightningGod_no_drums_dark_version_61: -63013331
+      LightningGod_no_drums_dark_version_24: 953370992
+      LightningGod_no_drums_dark_version_34: -1296188321
+      LightningGod_no_drums_dark_version_111: 616739022
+      LightningGod_no_drums_dark_version_63: -527545318
+      LightningGod_no_drums_dark_version_59: -1754228074
+      LightningGod_no_drums_dark_version_75: -1220705092
+      LightningGod_no_drums_dark_version_17: -1224724089
+      LightningGod_no_drums_dark_version_15: -1104321058
+      LightningGod_no_drums_dark_version_66: -265332525
+      LightningGod_no_drums_dark_version_101: -1062170163
+      LightningGod_no_drums_dark_version_87: 636728716
+      LightningGod_no_drums_dark_version_58: 745127685
+      LightningGod_no_drums_dark_version_23: 1667859406
+      LightningGod_no_drums_dark_version_42: 1071688346
+      LightningGod_no_drums_dark_version_65: -2008720778
+      LightningGod_no_drums_dark_version_82: 152082645
+      LightningGod_no_drums_dark_version_0: 1951139763
+      LightningGod_no_drums_dark_version_67: -655790093
+      LightningGod_no_drums_dark_version_73: 309975934
+      LightningGod_no_drums_dark_version_99: 1699101780
+      LightningGod_no_drums_dark_version_33: 700914156
+      LightningGod_no_drums_dark_version_13: 438584806
+      LightningGod_no_drums_dark_version_16: 967635390
+      LightningGod_no_drums_dark_version_49: -396400644
+      LightningGod_no_drums_dark_version_55: 888468448
+      LightningGod_no_drums_dark_version_5: 308370987
+      LightningGod_no_drums_dark_version_78: 1938789330
+      LightningGod_no_drums_dark_version_86: 202611027
+      LightningGod_no_drums_dark_version_20: 1086614686
+      LightningGod_no_drums_dark_version_53: -1263614736
+      LightningGod_no_drums_dark_version_38: 287022986
+      LightningGod_no_drums_dark_version_3: 245778493
+      LightningGod_no_drums_dark_version_91: 1736029228
+      LightningGod_no_drums_dark_version_95: -595896407
+      LightningGod_no_drums_dark_version_11: -1783743917
+      LightningGod_no_drums_dark_version_47: -190778454
+      LightningGod_no_drums_dark_version_80: -225733195
+      LightningGod_no_drums_dark_version_21: 1630806992
+      LightningGod_no_drums_dark_version_39: 112250676
+      LightningGod_no_drums_dark_version_31: -1690656542
+      LightningGod_no_drums_dark_version_60: -815473569
+      LightningGod_no_drums_dark_version_105: -1544712246
+      LightningGod_no_drums_dark_version_100: -1031830245
+      LightningGod_no_drums_dark_version_69: -1243488909
+      LightningGod_no_drums_dark_version_40: 903097583
+      LightningGod_no_drums_dark_version_96: 1756282235
+      LightningGod_no_drums_dark_version_54: -1342649505
+      LightningGod_no_drums_dark_version_18: 1644581776
+      LightningGod_no_drums_dark_version_25: 918466357
+      LightningGod_no_drums_dark_version_109: -225189455
+      LightningGod_no_drums_dark_version_37: -1831764278
+      LightningGod_no_drums_dark_version_45: 164475453
+      LightningGod_no_drums_dark_version_52: -667712148
+      LightningGod_no_drums_dark_version_6: 1911414948
+      LightningGod_no_drums_dark_version_89: 341621444
+      LightningGod_no_drums_dark_version_8: 676997398
+      LightningGod_no_drums_dark_version_77: -609667528
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour
 
     public int lastwasd = 3;
 
-    private Vector2 moveDirection;
+    public Vector2 moveDirection;
 
     public Animator anim;
 
@@ -82,7 +82,6 @@ public class PlayerMove : MonoBehaviour
     {
         //Physics calculations
         Move();
-        
     }
 
     void ProcessInputs()
@@ -258,5 +257,4 @@ public class PlayerMove : MonoBehaviour
         }
 
     }
-
 }

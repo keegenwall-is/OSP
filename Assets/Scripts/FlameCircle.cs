@@ -13,11 +13,32 @@ public class FlameCircle : MonoBehaviour
 
     public CapsuleCollider2D cc;
 
+    public float damage = 20;
+
+    private EnemyBase enemyScript;
+
+    private PlayerMove playerScript;
+
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         anim = GetComponent<Animator>();
         cc = GetComponent<CapsuleCollider2D>();
+        playerScript = player.GetComponent<PlayerMove>();
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            enemyScript = enemy.GetComponent<EnemyBase>();
+            if (enemyScript != null)
+            {
+                break;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -50,8 +71,20 @@ public class FlameCircle : MonoBehaviour
 
     IEnumerator CCOff()
     {
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+        playerScript.canMove = false;
 
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length * 2/3);
+
+        playerScript.canMove = true;
         cc.enabled = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && collision.isTrigger == false)
+        {
+            string enemyType = collision.gameObject.name;
+            enemyScript.EnemyTakeDamage(enemyType, damage);
+        }
     }
 }

@@ -26,13 +26,17 @@ public class Sword : MonoBehaviour
     public float cooldown = 6.0f;
     public float cdtimer = 0.0f;
 
-    Vector2 upColliderOffset = new Vector2(0, 2);
+    public float damage = 10.0f;
+
+    private EnemyBase enemyScript;
+
+    Vector2 upColliderOffset = new Vector2(0, 2.5f);
     Vector2 leftColliderOffset =new Vector2(-2, 0);
-    Vector2 downColliderOffset = new Vector2(0, -2);
+    Vector2 downColliderOffset = new Vector2(0, -0.5f);
     Vector2 rightColliderOffset = new Vector2(2, 0);
 
-    Vector2 verticalColliderSize = new Vector2(6, 3);
-    Vector2 horizontalColliderSize = new Vector2(3, 6);
+    Vector2 verticalColliderSize = new Vector2(4, 2);
+    Vector2 horizontalColliderSize = new Vector2(2, 4);
 
     // Start is called before the first frame update
     void Start()
@@ -44,11 +48,31 @@ public class Sword : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         cc = GetComponent<CapsuleCollider2D>();
         originalAS = anim.speed;
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            enemyScript = enemy.GetComponent<EnemyBase>();
+            if (enemyScript != null)
+            {
+                break;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        //AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+
+        //if (stateInfo.IsName("None"))
+        //{
+            //AttackFinish();
+            //sr.enabled = false;
+            //cc.enabled = false;
+        //}
+
         OCd.text = cdtimer.ToString();
 
         cdtimer = cdtimer - 1 * Time.deltaTime;
@@ -142,7 +166,7 @@ public class Sword : MonoBehaviour
         }
     }
 
-    void AttackFinish()
+    public void AttackFinish()
     {
         sr.enabled = false;
         cc.enabled = false;
@@ -154,6 +178,15 @@ public class Sword : MonoBehaviour
         baScript.StartCoroutine(baScript.OAbility(2.0f, duration));
         yield return new WaitForSeconds(duration);
         anim.speed = originalAS;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && collision.isTrigger == false)
+        {
+            string enemyType = collision.gameObject.name;
+            enemyScript.EnemyTakeDamage(enemyType, damage);
+        }
     }
 
 }

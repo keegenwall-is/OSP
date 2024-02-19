@@ -40,6 +40,12 @@ public class PFlameDash : MonoBehaviour
 
     public CircleCollider2D cc;
 
+    public float damage = 40.0f;
+
+    private EnemyBase enemyScript;
+
+    private WarriorStatManager warriorStatScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +55,19 @@ public class PFlameDash : MonoBehaviour
         moveScript = player.GetComponent<PlayerMove>();
         explScript = player.GetComponent<FireExpl>();
         cc = GetComponent<CircleCollider2D>();
+        warriorStatScript = player.GetComponent<WarriorStatManager>();
         //adtimer = abilityDuration + 1.0f;
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            enemyScript = enemy.GetComponent<EnemyBase>();
+            if (enemyScript != null)
+            {
+                break;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -135,8 +153,8 @@ public class PFlameDash : MonoBehaviour
                             {
                                 GameObject fireExplCopy = Instantiate(expl);
                                 Vector3 explPos = startPos;
-                                explPos.x = endPos.x + i * 2;
-                                explPos.y = endPos.y + 1;
+                                explPos.x = endPos.x + i * 2 + 2;
+                                explPos.y = endPos.y + 3;
                                 fireExplCopy.transform.position = explPos;
                             }
                             adtimer = 0.0f;
@@ -150,7 +168,7 @@ public class PFlameDash : MonoBehaviour
                             {
                                 GameObject fireExplCopy = Instantiate(expl);
                                 Vector3 explPos = startPos;
-                                explPos.y = endPos.y + i * 2;
+                                explPos.y = endPos.y + i * 2 + 2;
                                 explPos.x = endPos.x;
                                 fireExplCopy.transform.position = explPos;
                             }
@@ -166,7 +184,7 @@ public class PFlameDash : MonoBehaviour
                                 GameObject fireExplCopy = Instantiate(expl);
                                 Vector3 explPos = startPos;
                                 explPos.x = endPos.x - i * 2;
-                                explPos.y = endPos.y + 1;
+                                explPos.y = endPos.y + 3;
                                 fireExplCopy.transform.position = explPos;
                             }
                             adtimer = 0.0f;
@@ -179,8 +197,20 @@ public class PFlameDash : MonoBehaviour
 
     IEnumerator CCOff()
     {
+        warriorStatScript.canTakeDamage = false;
+
         yield return new WaitForSeconds(ballAnim.GetCurrentAnimatorStateInfo(0).length);
 
         cc.enabled = false;
+        warriorStatScript.canTakeDamage = true;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && collision.isTrigger == false)
+        {
+            string enemyType = collision.gameObject.name;
+            enemyScript.EnemyTakeDamage(enemyType, damage);
+        }
     }
 }

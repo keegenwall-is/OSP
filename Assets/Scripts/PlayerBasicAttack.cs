@@ -11,6 +11,10 @@ public class PlayerBasicAttack : MonoBehaviour
 
     private PlayerMove moveScript;
 
+    private EnemyBase enemyScript;
+
+    private Sword swordScript;
+
     int attackCount = 1;
     public bool canAttack = true;
     public bool attacking = false;
@@ -24,6 +28,19 @@ public class PlayerBasicAttack : MonoBehaviour
         anim = GetComponent<Animator>();
         moveScript = GetComponent<PlayerMove>();
         originalAS = anim.speed;
+        swordScript = sword.GetComponent<Sword>();
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            enemyScript = enemy.GetComponent<EnemyBase>();
+            if (enemyScript != null)
+            {
+                break;
+            }
+        }
+
     }
 
     // Update is called once per frame
@@ -83,11 +100,12 @@ public class PlayerBasicAttack : MonoBehaviour
         attacking = true;
     }
 
-    void AttackFinsih()
+    public void AttackFinish()
     {
         moveScript.canMove = true;
         canAttack = true;
         attacking = false;
+        swordScript.AttackFinish();
     }
 
     public IEnumerator OAbility(float newSpeed, float duration)

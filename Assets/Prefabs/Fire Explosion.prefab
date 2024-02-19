@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explAnim: {fileID: 8206404254135785911}
+  damage: 10
 --- !u!70 &3392055953737453155
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
