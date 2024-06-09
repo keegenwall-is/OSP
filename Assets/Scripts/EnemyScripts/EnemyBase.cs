@@ -14,6 +14,9 @@ public class EnemyBase : MonoBehaviour
     PlayerMove playerScript;
 
     ElementalShadowBehaviour shadowScript;
+    public RedWizardBehaviour redWizScript;
+    public GhoulBehaviour ghoulScript;
+    private bool lookRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -22,18 +25,38 @@ public class EnemyBase : MonoBehaviour
         playerScript = player.GetComponent<PlayerMove>();
         anim = GetComponent<Animator>();
         shadowScript = GetComponent<ElementalShadowBehaviour>();
+        ghoulScript = GetComponent<GhoulBehaviour>();
+        if (this.name.Contains("Ghoul"))
+        {
+            lookRight = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.position.x < this.transform.position.x)
+        if (lookRight)
         {
-            sr.flipX = true;
+            if (player.transform.position.x < this.transform.position.x)
+            {
+                sr.flipX = true;
+            }
+            else
+            {
+                sr.flipX = false;
+            }
         } else
         {
-            sr.flipX = false;
+            if (player.transform.position.x > this.transform.position.x)
+            {
+                sr.flipX = true;
+            }
+            else
+            {
+                sr.flipX = false;
+            }
         }
+
 
         if (player.transform.position.y < this.transform.position.y)
         {
@@ -44,11 +67,18 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
-    public void EnemyTakeDamage(string enemyType, float damage)
+    public void EnemyTakeDamage(GameObject enemyType, float damage)
     {
-        if (enemyType.Contains("Shadow"))
+        if (enemyType.name.Contains("Shadow") && shadowScript != null)
         {
             shadowScript.ShadowTakeDamage(damage);
+        } else if (enemyType.name.Contains("RedWizard") && redWizScript != null)
+        {
+            redWizScript.RedWizardTakeDamage(damage);
+        } else if (enemyType.name.Contains("Ghoul"))
+        {
+            ghoulScript = enemyType.GetComponent<GhoulBehaviour>();
+            ghoulScript.GhoulTakeDamage(damage);
         }
     }
 }

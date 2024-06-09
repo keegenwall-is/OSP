@@ -27,13 +27,13 @@ public class PathFinding : MonoBehaviour
 
     }
 
-    public Nodes FindNearestNode(Vector2 TargetPos)
+    public Nodes FindNearestNode(Vector2 targetPos)
     {
         float minDistance = float.MaxValue;
         Nodes closestNode = null;
         foreach (Nodes Node in allNodes)
         {
-            distance = Vector2.Distance(this.transform.position, Node.transform.position);
+            distance = Vector2.Distance(targetPos, Node.transform.position);
 
             if (distance < minDistance)
             {
@@ -44,13 +44,42 @@ public class PathFinding : MonoBehaviour
         return closestNode;
     }
 
-    public Nodes FindFurthestNode(Vector2 TargetPos)
+    public Nodes FindSecondNearestNode(Vector2 targetPos)
+    {
+        float minDistance = float.MaxValue;
+        float secondMinDistance = float.MaxValue;
+        Nodes nearestNode = null;
+        Nodes secondNearestNode = null;
+
+        foreach (Nodes node in allNodes)
+        {
+            float distance = Vector2.Distance(targetPos, node.transform.position);
+
+            if (distance < minDistance)
+            {
+                secondMinDistance = minDistance;
+                secondNearestNode = nearestNode;
+
+                minDistance = distance;
+                nearestNode = node;
+            }
+            else if (distance < secondMinDistance)
+            {
+                secondMinDistance = distance;
+                secondNearestNode = node;
+            }
+        }
+
+        return secondNearestNode;
+    }
+
+    public Nodes FindFurthestNode(Vector2 targetPos)
     {
         float maxDistance = 0.0f;
         Nodes furthestNode = null;
         foreach (Nodes Node in allNodes)
         {
-            //distance = Vector2.Distance(this.transform.position, Node.Transform.position);
+            distance = Vector2.Distance(targetPos, Node.transform.position);
 
             if (distance > maxDistance)
             {
@@ -58,50 +87,46 @@ public class PathFinding : MonoBehaviour
                 furthestNode = Node;
             }
         }
+        //print(furthestNode);
         return furthestNode;
     }
 
-    public List<Vector2> GetPath(Nodes startNode, Nodes endNode)
+    public List<Vector2> GetPath(Nodes startNode, Nodes endNode, Nodes excludedNode = null)
     {
+        openSet.Clear();
+        gScores.Clear();
+        hScores.Clear();
+        cameFrom.Clear();
         //a* algorithm for pathfinding
 
         //open set is a list of nodes that need to be explored
         openSet.Add(startNode);
 
-        //
-        gScores.Add(startNode, 0);
-        hScores.Add(startNode, Vector2.Distance(this.transform.position, endNode.transform.position));
-        cameFrom.Add(startNode, null);
+        gScores[startNode] = 0;
+        hScores[startNode] = Vector2.Distance(startNode.transform.position, endNode.transform.position);
+        cameFrom[startNode] = null;
 
-        while (openSet.Count != 0)
+        while (openSet.Count > 0)
         {
-            Nodes currentNode = openSet[0];
-
-            for (int i = 1; i < openSet.Count; i++)
-            {
-                if (gScores[openSet[i]] + hScores[openSet[i]] < gScores[currentNode] + hScores[currentNode])
-                {
-                    currentNode = openSet[i];
-                }
-            }
-
-            openSet.Remove(currentNode);
+            Nodes currentNode = openSet.OrderBy(node => gScores[node] + hScores[node]).First();
 
             if (currentNode == endNode)
             {
                 return ReconstructPath(cameFrom, endNode);
             }
 
+            openSet.Remove(currentNode);
+
             foreach (Nodes connectedNode in currentNode.connectedNodes)
             {
-                if (!connectedNode) continue;
+                if (connectedNode == null || connectedNode == excludedNode) continue;
                 float tentativegScore = gScores[currentNode] + Vector2.Distance(currentNode.transform.position, connectedNode.transform.position);
 
                 if (!gScores.ContainsKey(connectedNode))
                 {
-                    gScores.Add(connectedNode, float.MaxValue);
-                    hScores.Add(connectedNode, Vector2.Distance(connectedNode.transform.position, endNode.transform.position));
-                    cameFrom.Add(connectedNode, null);
+                    gScores[connectedNode] = float.MaxValue;
+                    hScores[connectedNode] = Vector2.Distance(connectedNode.transform.position, endNode.transform.position);
+                    cameFrom[connectedNode] = null;
                 }
 
                 if (tentativegScore < gScores[connectedNode])
@@ -115,6 +140,15 @@ public class PathFinding : MonoBehaviour
                     }
                 }
             }
+
+            /*for (int i = 1; i < openSet.Count; i++)
+            {
+                if (gScores[openSet[i]] + hScores[openSet[i]] < gScores[currentNode] + hScores[currentNode])
+                {
+                    currentNode = openSet[i];
+                }
+            }*/
+
         }
         return new List<Vector2>();
     }
@@ -122,14 +156,15 @@ public class PathFinding : MonoBehaviour
     public List<Vector2> ReconstructPath(Dictionary<Nodes, Nodes> cameFromMap, Nodes endNode)
     {
         List<Vector2> nodeLocations = new List<Vector2>();
+        Nodes currentNode = endNode;
 
-        Nodes nextNode = endNode;
-        while (nextNode)
+        while (currentNode != null)
         {
-            nodeLocations.Add(nextNode.transform.position);
-            nextNode = cameFromMap[nextNode];
+            nodeLocations.Add(currentNode.transform.position);
+            cameFromMap.TryGetValue(currentNode, out currentNode);
         }
 
+        nodeLocations.Reverse();
         return nodeLocations;
     }
 }

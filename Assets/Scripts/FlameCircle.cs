@@ -83,7 +83,7 @@ public class FlameCircle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy") && collision.isTrigger == false)
         {
-            string enemyType = collision.gameObject.name;
+            GameObject enemyType = collision.gameObject;
             enemyScript.EnemyTakeDamage(enemyType, damage);
         }
     }
