@@ -70,12 +70,13 @@ public class GhoulBehaviour : MonoBehaviour
         if (health <= 0)
         {
             isDead = true;
-            anim.Play("GhoulSpawn");
+            moveDirection = Vector2.zero;
+            anim.Play("GhoulDead");
             StartCoroutine(DestroyAfterAnimation());
         }
         else
         {
-            //anim.Play("BlueShadowHitAnim");
+            anim.Play("GhoulHit");
             //StartCoroutine(KnockBack());
             //print("Ghoul Damaged");
         }
