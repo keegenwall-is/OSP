@@ -4206,6 +4206,7 @@ MonoBehaviour:
   cc: {fileID: 262493527}
   damage: 20
   player: {fileID: 0}
+  expl: {fileID: 8206404254135785866, guid: 09aae3c4f9e0cf141bdc832179760a70, type: 3}
 --- !u!70 &262493527
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -60760,6 +60761,7 @@ MonoBehaviour:
   cc: {fileID: 0}
   damage: 20
   player: {fileID: 0}
+  expl: {fileID: 8206404254135785866, guid: 09aae3c4f9e0cf141bdc832179760a70, type: 3}
 --- !u!114 &512537725 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1271866881972805952, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
@@ -72809,7 +72811,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069196718}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1

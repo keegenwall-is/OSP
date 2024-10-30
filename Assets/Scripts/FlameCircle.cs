@@ -21,6 +21,8 @@ public class FlameCircle : MonoBehaviour
 
     public GameObject player;
 
+    public GameObject expl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +62,7 @@ public class FlameCircle : MonoBehaviour
             {
                 anim.Play("FlameCircleAnim");
                 cdtimer = cooldown;
+                Instantiate(expl, player.transform.position, Quaternion.identity);
                 if (cc != null)
                 {
                     cc.enabled = true;
@@ -72,8 +75,9 @@ public class FlameCircle : MonoBehaviour
     IEnumerator CCOff()
     {
         playerScript.canMove = false;
+        yield return new WaitForSeconds(0.1f);
 
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length * 2/3);
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
 
         playerScript.canMove = true;
         cc.enabled = false;
