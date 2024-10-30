@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public float moveY = 0;
     private bool running = false;
     public bool canMove = true;
+    public bool isDashing = false;
     public float sprintSpeed;
     public Rigidbody2D rb;
 
@@ -39,12 +40,15 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canMove == true)
+        if (canMove == true && !isDashing)
         {
             MoveAnimations();
         }
 
-        ProcessInputs();
+        if (isDashing != true)
+        {
+            ProcessInputs();
+        }
 
         //Debug.Log(Input.GetAxisRaw("Horizontal"));
         if (baScript.attacking == false){
@@ -97,7 +101,7 @@ public class PlayerMove : MonoBehaviour
         if (canMove == true)
         {
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
-        } else
+        } else if (isDashing == false)
         {
             rb.velocity = new Vector2(0, 0);
         }

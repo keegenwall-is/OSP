@@ -19,14 +19,12 @@ public class PFlameDash : MonoBehaviour
     public int noOfExpl = 5;
     public int maxCharges = 3;
     private int chargesLeft = 3;
-    public float cooldown = 19.0f;
+    private float cooldown = 1.0f;
     public float cdtimer = 0.0f;
     public float abilityDuration = 2.0f;
     public float adtimer = 0.0f;
-    public float dashDistance = 10.0f;
-    public float dashDuration = 1f;
-    public Vector3 dashDirection;
-    public float dashSpeed = 100.0f;
+    private float dashDuration = 0.1f;
+    private float dashSpeed = 125.0f;
     private bool abilityUsed = false;
     public CircleCollider2D cc;
     public float damage = 40.0f;
@@ -119,67 +117,20 @@ public class PFlameDash : MonoBehaviour
                     {
                         case 1:
                             sRenderer.sortingOrder = 5;
-                            startPos = player.transform.position;
-                            //player.transform.position += Vector3.up * dashDistance;
-                            dashDirection = Vector3.up;
-                            StartCoroutine(Dash());
-                            endPos = player.transform.position;
-                            for (int i = 0; i < noOfExpl; i++)
-                            {
-                                GameObject fireExplCopy = Instantiate(expl);
-                                Vector3 explPos = startPos;
-                                explPos.y = endPos.y - i * 2;
-                                explPos.x = endPos.x;
-                                fireExplCopy.transform.position = explPos;
-                            }
-                            adtimer = 0.0f;
                             break;
                         case 2:
                             sRenderer.sortingOrder = 6;
-                            startPos = player.transform.position;
-                            player.transform.position += Vector3.left * dashDistance;
-                            endPos = player.transform.position;
-                            for (int i = 0; i < noOfExpl; i++)
-                            {
-                                GameObject fireExplCopy = Instantiate(expl);
-                                Vector3 explPos = startPos;
-                                explPos.x = endPos.x + i * 2 + 2;
-                                explPos.y = endPos.y + 3;
-                                fireExplCopy.transform.position = explPos;
-                            }
-                            adtimer = 0.0f;
                             break;
                         case 3:
                             sRenderer.sortingOrder = 7;
-                            startPos = player.transform.position;
-                            player.transform.position += Vector3.down * dashDistance;
-                            endPos = player.transform.position;
-                            for (int i = 0; i < noOfExpl; i++)
-                            {
-                                GameObject fireExplCopy = Instantiate(expl);
-                                Vector3 explPos = startPos;
-                                explPos.y = endPos.y + i * 2 + 2;
-                                explPos.x = endPos.x;
-                                fireExplCopy.transform.position = explPos;
-                            }
-                            adtimer = 0.0f;
                             break;
                         case 4:
                             sRenderer.sortingOrder = 6;
-                            startPos = player.transform.position;
-                            player.transform.position += Vector3.right * dashDistance;
-                            endPos = player.transform.position;
-                            for (int i = 0; i < noOfExpl; i++)
-                            {
-                                GameObject fireExplCopy = Instantiate(expl);
-                                Vector3 explPos = startPos;
-                                explPos.x = endPos.x - i * 2;
-                                explPos.y = endPos.y + 3;
-                                fireExplCopy.transform.position = explPos;
-                            }
-                            adtimer = 0.0f;
                             break;
                     }
+                    moveScript.isDashing = true;
+                    startPos = player.transform.position;
+                    StartCoroutine(Dash());
                 }
             }
         } 
@@ -206,8 +157,24 @@ public class PFlameDash : MonoBehaviour
 
     IEnumerator Dash()
     {
-        rbody.velocity = dashDirection * dashSpeed;
+        moveScript.moveSpeed += dashSpeed;
         yield return new WaitForSeconds(dashDuration);
-        rbody.velocity = Vector3.zero;
+        moveScript.moveSpeed -= dashSpeed;
+        moveScript.isDashing = false;
+
+        //Controls the spawn location of the fire balls
+        endPos = player.transform.position;
+        Vector3 direction = (endPos - startPos).normalized;
+        float dashLength = Vector3.Distance(startPos, endPos);
+        float spacing = dashLength / noOfExpl;
+
+        // Spawn explosions in a line from startPos to endPos
+        for (int i = 0; i < noOfExpl; i++)
+        {
+            Vector3 explPos = startPos + direction * spacing * i;
+            GameObject fireExplCopy = Instantiate(expl, explPos, Quaternion.identity);
+        }
+
+        adtimer = 0.0f;
     }
 }

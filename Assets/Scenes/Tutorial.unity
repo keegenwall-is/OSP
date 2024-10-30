@@ -4497,6 +4497,7 @@ MonoBehaviour:
   moveX: 0
   moveY: 0
   canMove: 1
+  isDashing: 0
   sprintSpeed: 5
   rb: {fileID: 324749614}
   lastwasd: 3
@@ -72796,14 +72797,9 @@ MonoBehaviour:
   PCd: {fileID: 262028594}
   noOfExpl: 5
   maxCharges: 3
-  cooldown: 10
   cdtimer: 0
   abilityDuration: 2
   adtimer: 0
-  dashDistance: 10
-  dashDuration: 0.5
-  dashDirection: {x: 0, y: 0, z: 0}
-  dashSpeed: 50
   cc: {fileID: 2069196723}
   damage: 40
 --- !u!58 &2069196723
@@ -72813,10 +72809,10 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069196718}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.1, y: -1.7}
