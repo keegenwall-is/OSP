@@ -9844,7 +9844,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &466056147
 Animator:
@@ -9881,6 +9881,7 @@ MonoBehaviour:
   player: {fileID: 324749609}
   sr: {fileID: 466056145}
   anim: {fileID: 0}
+  shadowScript: {fileID: 0}
   redWizScript: {fileID: 0}
   ghoulScript: {fileID: 0}
 --- !u!1 &475562508
@@ -60758,6 +60759,17 @@ MonoBehaviour:
   cc: {fileID: 0}
   damage: 20
   player: {fileID: 0}
+--- !u!114 &512537725 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1271866881972805952, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
+  m_PrefabInstance: {fileID: 1271866882143685991}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56a4fc80b76dd342a4d35aa568f3f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -69262,65 +69274,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8874488776535482875, guid: f596fa69b1374b643af8801b17219ed6, type: 3}
   m_PrefabInstance: {fileID: 650486357}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &733482121
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 50.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1271866881972805958, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
-      propertyPath: m_Name
-      value: BlueShadow (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
 --- !u!1001 &747965312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71331,6 +71284,7 @@ MonoBehaviour:
   player: {fileID: 324749609}
   sr: {fileID: 1271240621}
   anim: {fileID: 0}
+  shadowScript: {fileID: 0}
   redWizScript: {fileID: 0}
   ghoulScript: {fileID: 0}
 --- !u!114 &1271240624
@@ -71636,12 +71590,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374405648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29, y: 45, z: 0}
+  m_LocalPosition: {x: -37.8, y: 27, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1374405653
 MonoBehaviour:
@@ -72837,6 +72791,7 @@ MonoBehaviour:
   ballAnim: {fileID: 2069196721}
   sRenderer: {fileID: 0}
   player: {fileID: 324749609}
+  rbody: {fileID: 0}
   expl: {fileID: 8206404254135785866, guid: 09aae3c4f9e0cf141bdc832179760a70, type: 3}
   PCd: {fileID: 262028594}
   noOfExpl: 5
@@ -72846,6 +72801,9 @@ MonoBehaviour:
   abilityDuration: 2
   adtimer: 0
   dashDistance: 10
+  dashDuration: 0.5
+  dashDirection: {x: 0, y: 0, z: 0}
+  dashSpeed: 50
   cc: {fileID: 2069196723}
   damage: 40
 --- !u!58 &2069196723
@@ -73024,6 +72982,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 324749609}
+    - target: {fileID: 1271866881972805954, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
+      propertyPath: shadowScript
+      value: 
+      objectReference: {fileID: 512537725}
     - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -73034,7 +72996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.1
+      value: 33.6
       objectReference: {fileID: 0}
     - target: {fileID: 1271866881972805956, guid: cc79acca77513f44e84c3fa003959ba8, type: 3}
       propertyPath: m_LocalPosition.z

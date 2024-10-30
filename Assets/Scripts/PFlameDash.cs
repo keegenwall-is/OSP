@@ -7,49 +7,37 @@ public class PFlameDash : MonoBehaviour
 {
 
     public Animator ballAnim;
-
     public Renderer sRenderer;
-
     public GameObject player;
-
+    public Rigidbody2D rbody;
     public GameObject expl;
-
     public Text PCd;
-
     private Vector3 startPos;
     private Vector3 endPos;
-
     private PlayerMove moveScript;
-
     private FireExpl explScript;
-
     public int noOfExpl = 5;
-
     public int maxCharges = 3;
     private int chargesLeft = 3;
-
     public float cooldown = 19.0f;
     public float cdtimer = 0.0f;
-
     public float abilityDuration = 2.0f;
     public float adtimer = 0.0f;
-
     public float dashDistance = 10.0f;
-
+    public float dashDuration = 1f;
+    public Vector3 dashDirection;
+    public float dashSpeed = 100.0f;
     private bool abilityUsed = false;
-
     public CircleCollider2D cc;
-
     public float damage = 40.0f;
-
     private EnemyBase enemyScript;
-
     private WarriorStatManager warriorStatScript;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+        rbody = player.GetComponent<Rigidbody2D>();
         sRenderer = GetComponent<Renderer>();
         ballAnim = GetComponent<Animator>();
         moveScript = player.GetComponent<PlayerMove>();
@@ -132,7 +120,9 @@ public class PFlameDash : MonoBehaviour
                         case 1:
                             sRenderer.sortingOrder = 5;
                             startPos = player.transform.position;
-                            player.transform.position += Vector3.up * dashDistance;
+                            //player.transform.position += Vector3.up * dashDistance;
+                            dashDirection = Vector3.up;
+                            StartCoroutine(Dash());
                             endPos = player.transform.position;
                             for (int i = 0; i < noOfExpl; i++)
                             {
@@ -212,5 +202,12 @@ public class PFlameDash : MonoBehaviour
             GameObject enemyType = collision.gameObject;
             enemyScript.EnemyTakeDamage(enemyType, damage);
         }
+    }
+
+    IEnumerator Dash()
+    {
+        rbody.velocity = dashDirection * dashSpeed;
+        yield return new WaitForSeconds(dashDuration);
+        rbody.velocity = Vector3.zero;
     }
 }

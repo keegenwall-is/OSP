@@ -34,7 +34,7 @@ public class GhoulBehaviour : MonoBehaviour
 
         if (!isSpawning && !isDead)
         {
-            if (distance < 3.0f)
+            if (distance < 2.0f)
             {
                 moveDirection = new Vector2(0, 0);
                 anim.Play("GhoulAttack");

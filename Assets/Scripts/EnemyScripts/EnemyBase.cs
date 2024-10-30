@@ -13,7 +13,7 @@ public class EnemyBase : MonoBehaviour
 
     PlayerMove playerScript;
 
-    ElementalShadowBehaviour shadowScript;
+    public ElementalShadowBehaviour shadowScript;
     public RedWizardBehaviour redWizScript;
     public GhoulBehaviour ghoulScript;
     private bool lookRight = true;
@@ -24,7 +24,7 @@ public class EnemyBase : MonoBehaviour
         player = GameObject.Find("Player");
         playerScript = player.GetComponent<PlayerMove>();
         anim = GetComponent<Animator>();
-        shadowScript = GetComponent<ElementalShadowBehaviour>();
+        //shadowScript = GetComponent<ElementalShadowBehaviour>();
         ghoulScript = GetComponent<GhoulBehaviour>();
         if (this.name.Contains("Ghoul"))
         {
@@ -69,8 +69,9 @@ public class EnemyBase : MonoBehaviour
 
     public void EnemyTakeDamage(GameObject enemyType, float damage)
     {
-        if (enemyType.name.Contains("Shadow") && shadowScript != null)
+        if (enemyType.name.Contains("Shadow"))
         {
+            shadowScript = enemyType.GetComponent<ElementalShadowBehaviour>();
             shadowScript.ShadowTakeDamage(damage);
         } else if (enemyType.name.Contains("RedWizard") && redWizScript != null)
         {
@@ -79,6 +80,9 @@ public class EnemyBase : MonoBehaviour
         {
             ghoulScript = enemyType.GetComponent<GhoulBehaviour>();
             ghoulScript.GhoulTakeDamage(damage);
+        } else
+        {
+            print("oh no");
         }
     }
 }
