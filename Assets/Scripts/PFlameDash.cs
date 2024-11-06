@@ -7,8 +7,10 @@ public class PFlameDash : MonoBehaviour
 {
 
     public Animator ballAnim;
+    public Animator UIAnim;
     public Renderer sRenderer;
     public GameObject player;
+    public GameObject ui;
     public Rigidbody2D rbody;
     public GameObject expl;
     public Text PCd;
@@ -35,9 +37,11 @@ public class PFlameDash : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        ui = GameObject.Find("WarriorImage");
         rbody = player.GetComponent<Rigidbody2D>();
         sRenderer = GetComponent<Renderer>();
         ballAnim = GetComponent<Animator>();
+        UIAnim = ui.GetComponent<Animator>();
         moveScript = player.GetComponent<PlayerMove>();
         explScript = player.GetComponent<FireExpl>();
         cc = GetComponent<CircleCollider2D>();
@@ -105,8 +109,10 @@ public class PFlameDash : MonoBehaviour
                 if (cdtimer <= 0.0f)
                 {
                     abilityUsed = true;
+
                     if (chargesLeft == maxCharges)
                     {
+                        StartCoroutine(PlayUIAnim());
                         adtimer = 0.0f;
                     }
                     ballAnim.Play("FlameBallAnim");
@@ -176,5 +182,19 @@ public class PFlameDash : MonoBehaviour
         }
 
         adtimer = 0.0f;
+    }
+
+    IEnumerator PlayUIAnim()
+    {
+        Time.timeScale = 0.0f;
+
+        UIAnim.updateMode = AnimatorUpdateMode.UnscaledTime;
+        UIAnim.Play("WarriorUIAnim");
+
+        yield return new WaitForSecondsRealtime(0.1f);
+
+        yield return new WaitForSecondsRealtime(UIAnim.GetCurrentAnimatorStateInfo(0).length);
+
+        Time.timeScale = 1.0f;
     }
 }
