@@ -99,8 +99,7 @@ public class Sword : MonoBehaviour
             {
                 if (attackCount == 1)
                 {
-                    sr.enabled = true;
-                    cc.enabled = true;
+                    RefreshCollider();
                     switch (moveScript.lastwasd)
                     {
                         case 1:
@@ -132,8 +131,7 @@ public class Sword : MonoBehaviour
                 }
                 else if (attackCount == 2)
                 {
-                    sr.enabled = true;
-                    cc.enabled = true;
+                    
                     switch (moveScript.lastwasd)
                     {
                         case 1:
@@ -205,6 +203,15 @@ public class Sword : MonoBehaviour
         down1Anim = "SwordAttack1Anim";
         down2Anim = "SwordAttack2DownAnim";
         damage = 10.0f;
+    }
+
+    IEnumerator RefreshCollider()
+    {
+        sr.enabled = false;
+        cc.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        sr.enabled = true;
+        cc.enabled = true;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
