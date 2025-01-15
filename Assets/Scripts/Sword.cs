@@ -38,6 +38,15 @@ public class Sword : MonoBehaviour
     Vector2 verticalColliderSize = new Vector2(4, 2);
     Vector2 horizontalColliderSize = new Vector2(2, 4);
 
+    private string up1Anim = "SwordAttack1UpAnim";
+    private string up2Anim = "SwordAttack2UpAnim";
+    private string right1Anim = "SwordAttack1RightAnim";
+    private string right2Anim = "SwordAttack2RightAnim";
+    private string left1Anim = "SwordAttack1LeftAnim";
+    private string left2Anim = "SwordAttack2LeftAnim";
+    private string down1Anim = "SwordAttack1Anim";
+    private string down2Anim = "SwordAttack2DownAnim";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -95,25 +104,25 @@ public class Sword : MonoBehaviour
                     switch (moveScript.lastwasd)
                     {
                         case 1:
-                            anim.Play("SwordAttack1UpAnim");
+                            anim.Play(up1Anim);
                             cc.offset = upColliderOffset;
                             cc.size = verticalColliderSize;
                             cc.direction = CapsuleDirection2D.Horizontal;
                             break;
                         case 2:
-                            anim.Play("SwordAttack1LeftAnim");
+                            anim.Play(left1Anim);
                             cc.offset = leftColliderOffset;
                             cc.size = horizontalColliderSize;
                             cc.direction = CapsuleDirection2D.Vertical;
                             break;
                         case 3:
-                            anim.Play("SwordAttack1Anim");
+                            anim.Play(down1Anim);
                             cc.offset = downColliderOffset;
                             cc.size = verticalColliderSize;
                             cc.direction = CapsuleDirection2D.Horizontal;
                             break;
                         case 4:
-                            anim.Play("SwordAttack1RightAnim");
+                            anim.Play(right1Anim);
                             cc.offset = rightColliderOffset;
                             cc.size = horizontalColliderSize;
                             cc.direction = CapsuleDirection2D.Vertical;
@@ -128,25 +137,25 @@ public class Sword : MonoBehaviour
                     switch (moveScript.lastwasd)
                     {
                         case 1:
-                            anim.Play("SwordAttack2UpAnim");
+                            anim.Play(up2Anim);
                             cc.offset = upColliderOffset;
                             cc.size = verticalColliderSize;
                             cc.direction = CapsuleDirection2D.Horizontal;
                             break;
                         case 2:
-                            anim.Play("SwordAttack2LeftAnim");
+                            anim.Play(left2Anim);
                             cc.offset = leftColliderOffset;
                             cc.size = horizontalColliderSize;
                             cc.direction = CapsuleDirection2D.Vertical;
                             break;
                         case 3:
-                            anim.Play("SwordAttack2DownAnim");
+                            anim.Play(down2Anim);
                             cc.offset = downColliderOffset;
                             cc.size = verticalColliderSize;
                             cc.direction = CapsuleDirection2D.Horizontal;
                             break;
                         case 4:
-                            anim.Play("SwordAttack2RightAnim");
+                            anim.Play(right2Anim);
                             cc.offset = rightColliderOffset;
                             cc.size = horizontalColliderSize;
                             cc.direction = CapsuleDirection2D.Vertical;
@@ -176,8 +185,26 @@ public class Sword : MonoBehaviour
     {
         anim.speed = 2.0f;
         baScript.StartCoroutine(baScript.OAbility(2.0f, duration));
+        up1Anim = "FireSwordAttack1UpAnim";
+        up2Anim = "FireSwordAttack2UpAnim";
+        right1Anim = "FireSwordAttack1RightAnim";
+        right2Anim = "FireSwordAttack2RightAnim";
+        left1Anim = "FireSwordAttack1LeftAnim";
+        left2Anim = "FireSwordAttack2LeftAnim";
+        down1Anim = "FireSwordAttack1DownAnim";
+        down2Anim = "FireSwordAttack2DownAnim";
+        damage = 15.0f;
         yield return new WaitForSeconds(duration);
         anim.speed = originalAS;
+        up1Anim = "SwordAttack1UpAnim";
+        up2Anim = "SwordAttack2UpAnim";
+        right1Anim = "SwordAttack1RightAnim";
+        right2Anim = "SwordAttack2RightAnim";
+        left1Anim = "SwordAttack1LeftAnim";
+        left2Anim = "SwordAttack2LeftAnim";
+        down1Anim = "SwordAttack1Anim";
+        down2Anim = "SwordAttack2DownAnim";
+        damage = 10.0f;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -186,6 +213,7 @@ public class Sword : MonoBehaviour
         {
             GameObject enemyType = collision.gameObject;
             enemyScript.EnemyTakeDamage(enemyType, damage);
+            print(damage);
         }
     }
 
