@@ -77,7 +77,7 @@ public class FlameCircle : MonoBehaviour
         playerScript.canMove = false;
         yield return new WaitForSeconds(0.1f);
 
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length - 0.15f);
 
         playerScript.canMove = true;
         cc.enabled = false;
