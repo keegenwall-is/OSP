@@ -73,8 +73,9 @@ public class EnemyBase : MonoBehaviour
         {
             shadowScript = enemyType.GetComponent<ElementalShadowBehaviour>();
             shadowScript.ShadowTakeDamage(damage);
-        } else if (enemyType.name.Contains("RedWizard") && redWizScript != null)
+        } else if (enemyType.name.Contains("RedWizard"))
         {
+            redWizScript = enemyType.GetComponent<RedWizardBehaviour>();
             redWizScript.RedWizardTakeDamage(damage);
         } else if (enemyType.name.Contains("Ghoul"))
         {
@@ -82,7 +83,7 @@ public class EnemyBase : MonoBehaviour
             ghoulScript.GhoulTakeDamage(damage);
         } else
         {
-            print("oh no");
+            print("no enemy detected");
         }
     }
 }

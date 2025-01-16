@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4611047084508672898}
   - component: {fileID: 4611047084508672899}
   - component: {fileID: -790271791204329169}
+  - component: {fileID: 4496965276042303245}
   m_Layer: 0
   m_Name: Ghoul
   m_TagString: Enemy
@@ -126,6 +127,7 @@ MonoBehaviour:
   rb: {fileID: 4611047084508672898}
   anim: {fileID: 4611047084508672902}
   player: {fileID: 0}
+  AttackCC: {fileID: 0}
 --- !u!50 &4611047084508672898
 Rigidbody2D:
   serializedVersion: 4
@@ -178,5 +180,22 @@ MonoBehaviour:
   player: {fileID: 0}
   sr: {fileID: 4611047084508672903}
   anim: {fileID: 0}
+  shadowScript: {fileID: 0}
   redWizScript: {fileID: 0}
   ghoulScript: {fileID: 0}
+--- !u!70 &4496965276042303245
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611047084508672905}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.1}
+  m_Size: {x: 3, y: 2}
+  m_Direction: 1

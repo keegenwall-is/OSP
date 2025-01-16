@@ -8,7 +8,7 @@ public class RedWizardBehaviour : MonoBehaviour
     List<Vector2> currentPath;
     List<Vector2> potentialPath;
     public Rigidbody2D rb;
-    public bool canMove = true;
+    public bool canFollowPath = true;
     public float moveSpeed = 6.0f;
     private Vector2 moveDirection;
     PathFinding pathFindingScript;
@@ -23,6 +23,16 @@ public class RedWizardBehaviour : MonoBehaviour
     private Nodes previousPlayerNode = null;
     private CapsuleCollider2D redWizCapCol;
     private bool newPath = false;
+    public RedWizState currentState;
+
+    public enum RedWizState
+    {
+        Idle,
+        Move,
+        Attack,
+        Damaged,
+        Dead
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +42,7 @@ public class RedWizardBehaviour : MonoBehaviour
         pathFindingScript = GetComponent<PathFinding>();
         player = GameObject.Find("Player");
         anim = GetComponent<Animator>();
+        SetState(RedWizState.Idle);
     }
 
     // Update is called once per frame
@@ -39,13 +50,18 @@ public class RedWizardBehaviour : MonoBehaviour
     {
         //currentPath = pathfinding function output
         UpdatePath();
-        MoveAlongPath();
+        if (canFollowPath)
+        {
+            MoveAlongPath();
+        }
+
 
         attackCurrent += Time.deltaTime;
 
         if (attackCurrent >= attackCD)
         {
-            StartCoroutine(RedWizAttack());
+            SetState(RedWizState.Attack);
+            attackCurrent = 0.0f;
         }
     }
 
@@ -54,33 +70,56 @@ public class RedWizardBehaviour : MonoBehaviour
         rb.velocity = moveDirection * moveSpeed;
     }
 
+    public void SetState(RedWizState newState)
+    {
+        if (currentState != newState)
+        {
+            currentState = newState;
+            OnStateEnter(newState);
+        }
+    }
+
+    private void OnStateEnter(RedWizState state)
+    {
+        switch (state)
+        {
+            case RedWizState.Idle:
+                canFollowPath = false;
+                anim.Play("RedWizIdle");
+                break;
+            case RedWizState.Move:
+                canFollowPath = true;
+                break;
+            case RedWizState.Attack:
+                canFollowPath = false;
+                anim.Play("RedWizAttack");
+                StartCoroutine(MoveStateAfterAnim());
+                break;
+            case RedWizState.Damaged:
+                canFollowPath = false;
+                anim.Play("RedWizDamaged");
+                StartCoroutine(MoveStateAfterAnim());
+                break;
+            case RedWizState.Dead:
+                canFollowPath = false;
+                anim.Play("RedWizDeath");
+                StartCoroutine(DestroyAfterAnimation());
+                break;
+        }
+    }
+
     public void RedWizardTakeDamage(float damage)
     {
         health -= damage;
         //print(health);
         if (health <= 0)
         {
-            canMove = false;
-            anim.Play("RedWizDeath");
-            StartCoroutine(DestroyAfterAnimation());
+            SetState(RedWizState.Dead);
         }
         else
         {
-            //anim.Play("BlueShadowHitAnim");
-            //StartCoroutine(KnockBack());
+            SetState(RedWizState.Damaged);
         }
-    }
-
-    IEnumerator RedWizAttack()
-    {
-        attackCurrent = 0f;
-        anim.Play("RedWizAttack");
-        isAttacking = true;
-
-        yield return new WaitForSeconds(0.1f);
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length - 0.1f);
-
-        isAttacking = false;
     }
 
     IEnumerator DestroyAfterAnimation()
@@ -90,6 +129,15 @@ public class RedWizardBehaviour : MonoBehaviour
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length - 0.1f);
 
         Destroy(gameObject);
+    }
+
+    IEnumerator MoveStateAfterAnim()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length - 0.1f);
+
+        SetState(RedWizState.Move);
     }
 
     public void SpawnGhoul()
@@ -180,19 +228,16 @@ public class RedWizardBehaviour : MonoBehaviour
         }
     }
 
-    /*void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (col.gameObject.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            redWizCapCol.enabled = false;
+            redWizCapCol.isTrigger = true;
         }
     }
 
-    void OnCollisionExit2D(Collision2D col)
+    void OnTriggerExit2D(Collider2D collision)
     {
-        if (col.gameObject.tag == "Enemy")
-        {
-            redWizCapCol.enabled = true;
-        }
-    }*/
+        redWizCapCol.isTrigger = false;
+    }
 }
