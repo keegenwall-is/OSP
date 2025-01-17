@@ -41,7 +41,7 @@ public class WarriorStatManager : MonoBehaviour
         playerScript.canMove = false;
         if (canTakeDamage)
         {
-            
+            health -= damage;
             baScript.canAttack = false;
 
             switch (enemyPos)
@@ -62,11 +62,13 @@ public class WarriorStatManager : MonoBehaviour
             StartCoroutine(HitAnim());
             swordScript.AttackFinish();
             baScript.AttackFinish();
-
-            health -= damage;
         }
-        
 
+        if (health <= 0)
+        {
+            playerScript.canMove = false;
+            StartCoroutine(Death(enemyPos));
+        }
     }
 
     public IEnumerator HitAnim()
@@ -77,5 +79,32 @@ public class WarriorStatManager : MonoBehaviour
 
         //playerScript.canMove = true;
         baScript.canAttack = true;
+    }
+
+    public IEnumerator Death(int enemyPos)
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+
+        switch (enemyPos)
+        {
+            case 1:
+                anim.Play("WarriorDeadUp");
+                break;
+            case 2:
+                anim.Play("WarriorDeadLeft");
+                break;
+            case 3:
+                anim.Play("WarriorDeadUp");
+                break;
+            case 4:
+                anim.Play("WarriorDeadRight");
+                break;
+        }
+
+        yield return new WaitForSeconds(0.1f);
+
+        Time.timeScale = 0.0f;
     }
 }
