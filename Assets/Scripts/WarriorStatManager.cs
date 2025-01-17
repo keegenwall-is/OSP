@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WarriorStatManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class WarriorStatManager : MonoBehaviour
     public float health = 100.0f;
 
     public bool canTakeDamage;
+
+    public Image gameOverScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -104,6 +107,8 @@ public class WarriorStatManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.1f);
+
+        gameOverScreen.gameObject.SetActive(true);
 
         Time.timeScale = 0.0f;
     }

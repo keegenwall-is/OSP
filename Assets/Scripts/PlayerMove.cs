@@ -30,6 +30,7 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
+        canMove = true;
         anim = GetComponent<Animator>();
         sword = GameObject.Find("Sword");
         swordScript = sword.GetComponent<Sword>();
@@ -40,12 +41,12 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canMove == true && !isDashing)
+        if (canMove && !isDashing)
         {
             MoveAnimations();
         }
 
-        if (isDashing != true)
+        if (!isDashing)
         {
             ProcessInputs();
         }
