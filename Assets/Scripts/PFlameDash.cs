@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class PFlameDash : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class PFlameDash : MonoBehaviour
     public float damage = 40.0f;
     private EnemyBase enemyScript;
     private WarriorStatManager warriorStatScript;
+    public EventReference flameBallSound;
 
     // Start is called before the first frame update
     void Start()
@@ -108,6 +110,7 @@ public class PFlameDash : MonoBehaviour
             {
                 if (cdtimer <= 0.0f)
                 {
+                    AudioManager.instance.PlayOneShot(flameBallSound, this.transform.position);
                     abilityUsed = true;
 
                     if (chargesLeft == maxCharges)

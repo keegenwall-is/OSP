@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class Sword : MonoBehaviour
 {
@@ -46,6 +47,9 @@ public class Sword : MonoBehaviour
     private string left2Anim = "SwordAttack2LeftAnim";
     private string down1Anim = "SwordAttack1Anim";
     private string down2Anim = "SwordAttack2DownAnim";
+
+    public EventReference swordSwingSound;
+    public EventReference swordPowerUpSound;
 
     // Start is called before the first frame update
     void Start()
@@ -99,6 +103,7 @@ public class Sword : MonoBehaviour
             {
                 if (attackCount == 1)
                 {
+                    AudioManager.instance.PlayOneShot(swordSwingSound, this.transform.position);
                     RefreshCollider();
                     switch (moveScript.lastwasd)
                     {
@@ -181,6 +186,7 @@ public class Sword : MonoBehaviour
 
     IEnumerator OAbility(float duration)
     {
+        AudioManager.instance.PlayOneShot(swordPowerUpSound, this.transform.position);
         anim.speed = 2.0f;
         baScript.StartCoroutine(baScript.OAbility(2.0f, duration));
         up1Anim = "FireSwordAttack1UpAnim";

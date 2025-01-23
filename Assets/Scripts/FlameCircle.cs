@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class FlameCircle : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class FlameCircle : MonoBehaviour
     public GameObject player;
 
     public GameObject expl;
+
+    public EventReference flameCircleSound;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +63,7 @@ public class FlameCircle : MonoBehaviour
         {
             if (cdtimer <= 0.0f)
             {
+                AudioManager.instance.PlayOneShot(flameCircleSound, this.transform.position);
                 anim.Play("FlameCircleAnim");
                 cdtimer = cooldown;
                 Instantiate(expl, player.transform.position, Quaternion.identity);
